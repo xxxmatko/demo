@@ -1,0 +1,6 @@
+.copyright {
+    background-color: var(--app-footer-background);
+    color: var(--mdc-theme-text-primary-on-dark);
+    text-align: center;
+    font-size: 12px;
+}

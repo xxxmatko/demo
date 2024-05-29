@@ -1,0 +1,1 @@
+Lorem ipsum &copy; 2024

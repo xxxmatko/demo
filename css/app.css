@@ -2,9 +2,28 @@ html,
 body {
     --mdc-theme-primary: #ffc107;
     --mdc-theme-secondary: #03a9f4;
+    
+    --app-footer-background: #080808;
 
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 70%;
+}
+
+/* tablet */
+@media (max-width:839px) {
+    .container {
+        width:98%;
+    }
+}
+
+/* phone */
+@media (max-width: 599px) {
 }
