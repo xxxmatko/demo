@@ -1,0 +1,12 @@
+{
+    "version": "1.0.0",
+    "name": "demo",
+    "author": "xxxmatko",
+    "private": true,
+    "devDependencies": {
+    },
+    "dependencies": {
+        "knockout": "3.5.1",
+        "moment": "2.29.4"
+    }
+}
