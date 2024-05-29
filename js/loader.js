@@ -37,12 +37,12 @@
     Loader.prototype.getConfig = function(name, callback) {
         callback({
             template: {
-                html: `./content/${name}/_template.html`,
-                css: `./content/${name}/_style.css`
+                html: `/content/${name}/_template.html`,
+                css: `/content/${name}/_style.css`
             },
             viewModel: {
-                js: `./content/${name}/_viewmodel.js`,
-                md: `./content/${name}/${name}.md`
+                js: `/content/${name}/_viewmodel.js`,
+                md: `/content/${name}/${name}.md`
             }
         });
     };
@@ -64,8 +64,8 @@
          </div>`;
 
         Promise.all([
-            fetch(config.html).then((response) => response.ok ? response.text() : ""),
-            fetch(config.css).then((response) => response.ok ? response.text() : "")
+            fetchRaw(config.html).then((response) => response.ok ? response.text() : ""),
+            fetchRaw(config.css).then((response) => response.ok ? response.text() : "")
         ]).then((response) => {
             let html = response[0]; 
             let css = response[1]; 
@@ -94,16 +94,15 @@
      */
     Loader.prototype.loadViewModel = function(name, config, callback) {
         Promise.all([
-            fetch(config.js).then((response) => response.ok ? response.text() : ""),
-            fetch(config.md).then((response) => response.ok ? response.text() : `${name.toUpperCase()} : TODO`)
+            fetchRaw(config.js).then((response) => response.ok ? response.text() : ""),
+            fetchMarkdown(config.md).then((response) => response.ok ? response.text() : `${name.toUpperCase()} : TODO`)
         ]).then((response) => {
             let script = response[0]; 
             let content = response[1]; 
-
-            let lambda = Function("params", "componentInfo", 
+            let lambda = Function("content", "params", "componentInfo", 
                 `params = params || {};
                  params.name = "${name.replace(/\w+/g, (w) => w[0].toUpperCase() + w.slice(1).toLowerCase())}";
-                 params.content = "${content}";
+                 params.content = content;
                  params.element = componentInfo.element.querySelector ? componentInfo.element : componentInfo.element.parentElement || componentInfo.element.parentNode;
                 
                  ${script || "let Model = function (args = {}) { this.content = args.content; };"}
@@ -113,7 +112,7 @@
                  };
 
                  return new Model(params);`);
-            callback(lambda);
+            callback(lambda.bind(global, content));
         });
     };
 
