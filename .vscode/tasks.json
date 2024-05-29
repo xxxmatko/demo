@@ -22,6 +22,18 @@
 				"panel": "new"
 			},
             "problemMatcher": []
+        },
+		{
+            "label": "preview",
+            "type": "shell",
+            "windows": {
+                "command": ".\\preview.url"
+            },
+            "group": "build",
+            "presentation": {
+				"panel": "new"
+			},
+            "problemMatcher": []
         }
     ]
 }
