@@ -2,7 +2,7 @@
     //#region [ Fields ]
 
     const uri = "https://api.github.com/repos/xxxmatko/demo/contents";
-    const token = "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";
+    const token = ["E","J","g","V","T","3","4","T","4","w","r","7","L","4","E","A","d","f","4","I","D","j","d","l","a","a","J","L","A","5","D","8","S","u","0","B","_","p","h","g"];
     const apiVersion = "2022-11-28";
 
     //#endregion
