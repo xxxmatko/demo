@@ -49,7 +49,31 @@
      * Loads content.
      */
     Block.prototype.load = function() {
-        var url = `./content/${this.id.replace(/-/gi,"/")}/${this.id.split("-").pop()}.md`;
+        if (this.isIndex) {
+            let url = `./content/${this.id.replace(/-/gi,"/")}.md`;
+            global.app
+                .fetch(url)
+                .then((response) => response.ok ? response.text() : "")
+                .then((yaml) => {
+                    let children = global.frontmatter(yaml).attributes.children;
+                    let xhrs = children.map((c) => {
+                        let u = `./content/${this.id.replace(/index$/, c).replace(/-/gi,"/")}.md`
+                        return global.app
+                            .fetch(u, global.App.FETCH_CONTENT_TYPE.html)
+                            .then((response) => response.ok ? response.text() : `${c.toUpperCase()} : TODO`);
+                    })
+
+                    Promise.all(xhrs)
+                        .then((response) => {
+                            let content = {};
+                            children.forEach((c, i) => content[c] = response[i]);
+                            this.content(content);
+                        });
+                })
+            return;
+        }
+
+        let url = `./content/${this.id.replace(/-/gi,"/")}/${this.id.split("-").pop()}.md`;
 
         global.app
             .fetch(url, global.App.FETCH_CONTENT_TYPE.html)
