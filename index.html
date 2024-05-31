@@ -15,8 +15,15 @@
     <link href="css/app.css" rel="stylesheet" />
     <link href="css/copyright.css" rel="stylesheet" />
     <link href="css/footer.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
 </head>
 <body class="mdc-typography">
+    <app-block params="id: 'menu', classes: 'menu,mdc-top-app-bar,mdc-top-app-bar--fixed'.split(',')">
+        <div class="mdc-top-app-bar__row container">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+                     data-bind="html: content"></section>
+        </div>
+    </app-block>
     <app-block params="id: 'footer-index', classes: 'footer,mdc-layout-grid'.split(',')">
         <div class="mdc-layout-grid__inner container">
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">

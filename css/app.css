@@ -5,6 +5,7 @@ body {
     
     --app-footer-background: #4d4d4d;
     --app-copyright-background: #474747;
+    --app-button-height: 36px;
 
     margin: 0;
     padding: 0;
