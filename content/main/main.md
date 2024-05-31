@@ -1,4 +1,4 @@
-![wood](./wood.jpg)
+![wood](https://raw.githubusercontent.com/xxxmatko/demo/main/content/main/wood.jpg)
 
 # Lorem ipsum dolor
 
