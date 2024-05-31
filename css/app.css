@@ -3,7 +3,8 @@ body {
     --mdc-theme-primary: #ffc107;
     --mdc-theme-secondary: #03a9f4;
     
-    --app-footer-background: #080808;
+    --app-footer-background: #4d4d4d;
+    --app-copyright-background: #474747;
 
     margin: 0;
     padding: 0;
@@ -15,6 +16,10 @@ body {
     margin: 0 auto;
     max-width: 1280px;
     width: 70%;
+}
+
+a.anchor {
+    display: none;
 }
 
 /* tablet */

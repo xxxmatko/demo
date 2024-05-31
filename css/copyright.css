@@ -1,5 +1,5 @@
 .copyright {
-    background-color: var(--app-footer-background);
+    background-color: var(--app-copyright-background);
     color: var(--mdc-theme-text-primary-on-dark);
     text-align: center;
     font-size: 12px;
