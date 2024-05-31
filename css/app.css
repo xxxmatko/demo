@@ -23,7 +23,7 @@ body {
 }
 
 a.anchor {
-    display: none;
+    display: none !important;
 }
 
 /* tablet */
