@@ -8,6 +8,7 @@ body {
     --app-button-height: 36px;
     --app-theme-background-secondary: #212121;
     --app-theme-background-secondary-light: #414141;
+    --app-font: Pacifico;
 
     margin: 0;
     padding: 0;

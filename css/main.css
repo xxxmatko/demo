@@ -13,7 +13,7 @@
     color: var(--mdc-theme-text-primary-on-dark);
     text-shadow: 0 1px 2px var(--mdc-theme-on-surface);
     text-align: center;
-    font-family: Pacifico;
+    font-family: var(--app-font);
 }
 
 .main p {

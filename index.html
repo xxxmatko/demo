@@ -20,6 +20,7 @@
     <link href="css/footer.css" rel="stylesheet" />
     <link href="css/menu.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <link href="css/section.css" rel="stylesheet" />
 </head>
 <body class="mdc-typography">
     <app-block params="id: 'menu', classes: 'menu,mdc-top-app-bar,mdc-top-app-bar--fixed'.split(',')">
@@ -35,6 +36,27 @@
                      data-bind="html: content"></div>
             </section>
         </div>
+    </app-block>
+    <app-block params="id: 'about', classes: 'section'.split(',')">
+        <section class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner container">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" data-bind="html: content"></div>
+            </div>
+        </section>
+    </app-block>
+    <app-block params="id: 'about', classes: 'section'.split(',')">
+        <section class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner container">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" data-bind="html: content"></div>
+            </div>
+        </section>
+    </app-block>
+    <app-block params="id: 'about', classes: 'section'.split(',')">
+        <section class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner container">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" data-bind="html: content"></div>
+            </div>
+        </section>
     </app-block>
     <app-block params="id: 'footer-index', classes: 'footer,mdc-layout-grid'.split(',')">
         <div class="mdc-layout-grid__inner container">
