@@ -1,0 +1,3 @@
+###### Základné informácie
+
+todo
