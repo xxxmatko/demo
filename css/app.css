@@ -3,9 +3,11 @@ body {
     --mdc-theme-primary: #ffc107;
     --mdc-theme-secondary: #03a9f4;
     
-    --app-footer-background: #4d4d4d;
-    --app-copyright-background: #474747;
+    --app-footer-background: #212121;
+    --app-copyright-background: #1C1C1C;
     --app-button-height: 36px;
+    --app-theme-background-secondary: #212121;
+    --app-theme-background-secondary-light: #414141;
 
     margin: 0;
     padding: 0;
