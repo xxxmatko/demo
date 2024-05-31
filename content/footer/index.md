@@ -6,7 +6,3 @@ params:
 title: Example
 weight: 10
 ---
-
-# Footer
-
-Lorem ipsum

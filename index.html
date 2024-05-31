@@ -13,15 +13,18 @@
     <link href="css/openfonts-roboto.css" rel="stylesheet" />
     <link href="css/material-components-web.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
+    <link href="css/copyright.css" rel="stylesheet" />
 </head>
 <body class="mdc-typography">
-    <ko-footer></ko-footer>
-    <ko-copyright></ko-copyright>
+    <app-block params="id: 'copyright', classes: 'copyright,mdc-layout-grid'.split(',')">
+        <div class="mdc-layout-grid__inner container">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" data-bind="html: content"></div>
+        </div>
+    </app-block>
     <script src="js/libs/material-components-web.min.js"></script>
     <script src="js/libs/knockout-latest.js"></script>
     <script src="js/libs/moment-with-locales.min.js"></script>
-    <script src="js/fetch.js"></script>
-    <script src="js/loader.js"></script>
+    <script src="js/block.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
