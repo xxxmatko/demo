@@ -24,6 +24,11 @@
     font-size: 14px;
 }
 
+.footer strong {
+    font-weight: var(--mdc-typography-body1-font-weight);
+    color: var(--mdc-theme-text-primary-on-dark);
+}
+
 .footer a {
     color: var(--mdc-theme-primary);
     text-decoration: none;
